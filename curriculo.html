@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kauan Henrique Kaestner — Currículo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #0f1f38;
+      --blue: #1a3d6e;
+      --accent: #2e6ad0;
+      --light-blue: #ddeeff;
+      --text: #1c1c1c;
+      --muted: #5a6478;
+      --border: #dde3ed;
+      --bg: #f7f9fc;
+      --white: #ffffff;
+      --tag-bg: #e8f0fd;
+      --tag-color: #1a3d6e;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 40px auto;
+      background: var(--white);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* ── HEADER ─────────────────────────────────────────── */
+    header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      color: white;
+      padding: 40px 48px 36px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    header .title {
+      font-size: 15px;
+      color: #a8c4e8;
+      font-weight: 400;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 28px;
+      margin-top: 16px;
+    }
+
+    .contacts a,
+    .contacts span {
+      color: #c5d8f0;
+      text-decoration: none;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .contacts a:hover {
+      color: white;
+    }
+
+    .contacts .icon {
+      font-size: 14px;
+      opacity: 0.75;
+    }
+
+    /* ── BODY LAYOUT ────────────────────────────────────── */
+    .body {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+    }
+
+    /* ── SIDEBAR ─────────────────────────────────────────── */
+    aside {
+      background: #f0f4fb;
+      padding: 32px 28px;
+      border-right: 1px solid var(--border);
+    }
+
+    /* ── MAIN ───────────────────────────────────────────── */
+    main {
+      padding: 32px 40px;
+    }
+
+    /* ── SECTION TITLES ─────────────────────────────────── */
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--accent);
+      margin-bottom: 16px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    section {
+      margin-bottom: 32px;
+    }
+
+    /* ── SKILLS ─────────────────────────────────────────── */
+    .skill-group {
+      margin-bottom: 18px;
+    }
+
+    .skill-group h4 {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-color);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 20px;
+      border: 1px solid #c5d6f5;
+    }
+
+    .tag.highlight {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    /* ── EDUCATION ──────────────────────────────────────── */
+    .edu-item h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .edu-item .institution {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .edu-item .period {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #fff3cd;
+      color: #856404;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-top: 4px;
+      border: 1px solid #ffc107;
+    }
+
+    /* ── LANGUAGES ──────────────────────────────────────── */
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .lang-item .lang-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .lang-level {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--light-blue);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    /* ── EXPERIENCE ─────────────────────────────────────── */
+    .job {
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .job:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 4px;
+      gap: 12px;
+    }
+
+    .job-header h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .job-period {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 600;
+      background: var(--light-blue);
+      padding: 3px 10px;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
+
+    .job-company {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .job ul {
+      padding-left: 18px;
+      list-style: none;
+    }
+
+    .job ul li {
+      font-size: 13.5px;
+      color: #333;
+      margin-bottom: 6px;
+      padding-left: 4px;
+      position: relative;
+    }
+
+    .job ul li::before {
+      content: '▸';
+      position: absolute;
+      left: -16px;
+      color: var(--accent);
+      font-size: 12px;
+      top: 2px;
+    }
+
+    /* ── PROJECTS ───────────────────────────────────────── */
+    .project {
+      margin-bottom: 20px;
+      padding: 16px 18px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: #fafbfd;
+    }
+
+    .project:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      gap: 12px;
+    }
+
+    .project-header h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .project-private {
+      font-size: 11px;
+      color: var(--muted);
+      background: #f0f0f0;
+      padding: 2px 8px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      white-space: nowrap;
+    }
+
+    .project p {
+      font-size: 13px;
+      color: #444;
+      margin-bottom: 8px;
+    }
+
+    /* ── SUMMARY ────────────────────────────────────────── */
+    .summary {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.7;
+      background: #f5f8ff;
+      border-left: 3px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 0;
+    }
+
+    /* ── PRINT ──────────────────────────────────────────── */
+    @media print {
+      body { background: white; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .body { grid-template-columns: 1fr; }
+      aside { border-right: none; border-bottom: 1px solid var(--border); }
+      header { padding: 28px 24px 24px; }
+      main { padding: 24px 20px; }
+      header h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <h1>Kauan Henrique Kaestner</h1>
+    <p class="title">Desenvolvedor Backend &amp; IA · Python · LLMs · Automação</p>
+    <div class="contacts">
+      <span><span class="icon">📍</span> Jaraguá do Sul – SC</span>
+      <a href="tel:+5547992277579"><span class="icon">📱</span> (47) 99227-7579</a>
+      <a href="mailto:kauankaestner06@gmail.com"><span class="icon">✉</span> kauankaestner06@gmail.com</a>
+      <a href="https://github.com/KauanHK" target="_blank"><span class="icon">⌥</span> github.com/KauanHK</a>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <aside>
+
+      <!-- EDUCAÇÃO -->
+      <section>
+        <h2 class="section-title">Formação</h2>
+        <div class="edu-item">
+          <h4>Engenharia de Software</h4>
+          <p class="institution">Católica SC</p>
+          <p class="period">02/2024 – 12/2027 (prev.)</p>
+          <span class="badge">5º Semestre</span>
+        </div>
+      </section>
+
+      <!-- HABILIDADES -->
+      <section>
+        <h2 class="section-title">Habilidades</h2>
+
+        <div class="skill-group">
+          <h4>Principal</h4>
+          <div class="tags">
+            <span class="tag highlight">Python</span>
+            <span class="tag highlight">FastAPI</span>
+            <span class="tag highlight">LangChain</span>
+            <span class="tag highlight">Agentes de IA</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>Web &amp; Automação</h4>
+          <div class="tags">
+            <span class="tag">Selenium</span>
+            <span class="tag">Playwright</span>
+            <span class="tag">RPAs</span>
+            <span class="tag">n8n</span>
+            <span class="tag">API WhatsApp</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>Cloud &amp; Infra</h4>
+          <div class="tags">
+            <span class="tag">AWS Lambda</span>
+            <span class="tag">AWS ECR</span>
+            <span class="tag">DynamoDB</span>
+            <span class="tag">S3</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Docker Compose</span>
+            <span class="tag">Nginx</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>Banco de Dados</h4>
+          <div class="tags">
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">DynamoDB</span>
+            <span class="tag">Caché InterSystems</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>IA &amp; ML</h4>
+          <div class="tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">LLMs</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>Servidor &amp; Redes</h4>
+          <div class="tags">
+            <span class="tag">Linux</span>
+            <span class="tag">DNS / Domínios</span>
+            <span class="tag">Subdomínios</span>
+            <span class="tag">Redes Docker</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- IDIOMAS -->
+      <section>
+        <h2 class="section-title">Idiomas</h2>
+        <div class="lang-item">
+          <span class="lang-name">Português</span>
+          <span class="lang-level">Nativo</span>
+        </div>
+        <div class="lang-item">
+          <span class="lang-name">Inglês</span>
+          <span class="lang-level">Fluente</span>
+        </div>
+        <div class="lang-item">
+          <span class="lang-name">Alemão</span>
+          <span class="lang-level">Básico</span>
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+      <!-- RESUMO PROFISSIONAL -->
+      <section>
+        <h2 class="section-title">Sobre mim</h2>
+        <p class="summary">
+          Desenvolvedor backend apaixonado por Python, com experiência sólida em APIs REST com FastAPI, automações (RPA, n8n), agentes de IA baseados em LLMs e infraestrutura em nuvem (AWS). Gosto de construir soluções completas — desde a API até a configuração do servidor — e tenho grande interesse em aplicações práticas de inteligência artificial. Cursando Engenharia de Software e em constante evolução técnica.
+        </p>
+      </section>
+
+      <!-- EXPERIÊNCIA -->
+      <section>
+        <h2 class="section-title">Experiência Profissional</h2>
+
+        <div class="job">
+          <div class="job-header">
+            <h3>Programador Junior</h3>
+            <span class="job-period">03/2025 – presente</span>
+          </div>
+          <p class="job-company">Widelab · Jaraguá do Sul, SC</p>
+          <ul>
+            <li>Desenvolvimento de APIs backend com <strong>Python + FastAPI</strong>, integrando sistemas internos e externos.</li>
+            <li>Criação de <strong>RPAs</strong> com Selenium e Playwright para automação de processos manuais em larga escala.</li>
+            <li>Construção e orquestração de <strong>agentes de IA</strong> com LLMs aplicados a fluxos de atendimento e processamento de dados.</li>
+            <li>Integração com a <strong>API oficial do WhatsApp Business</strong> para automações de comunicação.</li>
+            <li>Automação de fluxos com <strong>n8n</strong>, conectando múltiplos serviços e APIs.</li>
+            <li>Deploy e manutenção de serviços na <strong>AWS</strong>: Lambda, ECR, DynamoDB e S3.</li>
+            <li>Manutenção e desenvolvimento sobre <strong>Caché InterSystems</strong>, sistema ERP legado utilizado pela Consistem (parceira da Widelab).</li>
+            <li>Participação no <strong>detalhamento de projetos</strong> e estimativa de horas de desenvolvimento.</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <!-- PROJETOS PESSOAIS -->
+      <section>
+        <h2 class="section-title">Projetos Pessoais</h2>
+
+        <div class="project">
+          <div class="project-header">
+            <h4>Sistema Comercial</h4>
+            <span class="project-private">privado</span>
+          </div>
+          <p>Sistema comercial completo com backend em <strong>Python (FastAPI)</strong> e frontend em <strong>TypeScript</strong>, containerizados com Docker. Cobre gestão de clientes, vendas e operações comerciais.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">TypeScript</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <h4>CRM</h4>
+            <span class="project-private">privado</span>
+          </div>
+          <p>CRM desenvolvido do zero com <strong>Python (FastAPI)</strong> no backend e <strong>TypeScript</strong> no frontend, com infraestrutura Docker. Gerenciamento de clientes, pipeline de vendas e automações.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">TypeScript</span><span class="tag">Docker</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <h4>Sistema de Emissão de Notas Fiscais</h4>
+            <span class="project-private">privado</span>
+          </div>
+          <p>Solução de emissão de notas fiscais eletrônicas com backend <strong>Python</strong> e frontend <strong>TypeScript</strong>. Integração com APIs fiscais e fluxo completo de emissão e armazenamento.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">TypeScript</span><span class="tag">Docker</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <h4>Infraestrutura própria (VPS)</h4>
+            <span class="project-private">pessoal</span>
+          </div>
+          <p>Configuração e manutenção de servidores Linux, gerenciamento de <strong>domínios, subdomínios, Nginx</strong> como reverse proxy, redes Docker e Docker Compose para orquestração de múltiplos serviços em produção.</p>
+          <div class="tags">
+            <span class="tag">Linux</span><span class="tag">Nginx</span><span class="tag">Docker</span><span class="tag">Docker Compose</span><span class="tag">DNS</span>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+</div>
+</body>
+</html>
