@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kauan Henrique Kaestner — Currículo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,21 +15,21 @@
     }
 
     :root {
-      --navy: #0f1f38;
-      --blue: #1a3d6e;
-      --accent: #2e6ad0;
-      --light-blue: #ddeeff;
-      --text: #1c1c1c;
-      --muted: #5a6478;
-      --border: #dde3ed;
-      --bg: #f7f9fc;
-      --white: #ffffff;
-      --tag-bg: #e8f0fd;
-      --tag-color: #1a3d6e;
+      --dark:      #0D1117;
+      --navy:      #1B2A4A;
+      --accent:    #FFD43B;
+      --text:      #1A1A2A;
+      --muted:     #64748B;
+      --border:    #E2E8F0;
+      --bg:        #F7F8FA;
+      --white:     #FFFFFF;
+      --sidebar:   #F1F4F9;
+      --tag-bg:    #EEF2FF;
+      --tag-color: #3730A3;
     }
 
     body {
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -37,70 +40,73 @@
       max-width: 960px;
       margin: 40px auto;
       background: var(--white);
-      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-      border-radius: 8px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+      border-radius: 10px;
       overflow: hidden;
     }
 
     /* ── HEADER ─────────────────────────────────────────── */
     header {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      background: var(--dark);
       color: white;
       padding: 40px 48px 36px;
+      border-bottom: 4px solid var(--accent);
     }
 
     header h1 {
-      font-size: 32px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 36px;
       font-weight: 700;
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
     }
 
     header .title {
-      font-size: 15px;
-      color: #a8c4e8;
-      font-weight: 400;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      color: #8B9DC3;
+      font-weight: 500;
+      margin-bottom: 24px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
     .contacts {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px 28px;
-      margin-top: 16px;
+      gap: 14px 24px;
     }
 
     .contacts a,
     .contacts span {
-      color: #c5d8f0;
+      color: #A8B8D4;
       text-decoration: none;
-      font-size: 13px;
+      font-size: 12.5px;
       display: flex;
       align-items: center;
       gap: 7px;
+      transition: color 0.15s;
     }
 
     .contacts a:hover {
-      color: white;
+      color: var(--accent);
     }
 
-    .contacts .icon {
-      font-size: 14px;
-      opacity: 0.75;
+    .contacts svg {
+      opacity: 0.65;
+      flex-shrink: 0;
     }
 
     /* ── BODY LAYOUT ────────────────────────────────────── */
     .body {
       display: grid;
-      grid-template-columns: 280px 1fr;
+      grid-template-columns: 268px 1fr;
     }
 
     /* ── SIDEBAR ─────────────────────────────────────────── */
     aside {
-      background: #f0f4fb;
-      padding: 32px 28px;
+      background: var(--sidebar);
+      padding: 32px 26px;
       border-right: 1px solid var(--border);
     }
 
@@ -111,58 +117,61 @@
 
     /* ── SECTION TITLES ─────────────────────────────────── */
     .section-title {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 1.8px;
-      color: var(--accent);
+      letter-spacing: 2px;
+      color: var(--navy);
       margin-bottom: 16px;
       padding-bottom: 6px;
       border-bottom: 2px solid var(--accent);
     }
 
     section {
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
 
     /* ── SKILLS ─────────────────────────────────────────── */
     .skill-group {
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .skill-group h4 {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 8px;
+      color: var(--muted);
+      margin-bottom: 7px;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
     }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 5px;
     }
 
     .tag {
       background: var(--tag-bg);
       color: var(--tag-color);
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 500;
-      padding: 3px 10px;
-      border-radius: 20px;
-      border: 1px solid #c5d6f5;
+      padding: 3px 9px;
+      border-radius: 4px;
+      border: 1px solid #D4D9F9;
     }
 
     .tag.highlight {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
+      background: var(--dark);
+      color: var(--accent);
+      border-color: transparent;
+      font-weight: 600;
     }
 
     /* ── EDUCATION ──────────────────────────────────────── */
     .edu-item h4 {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 14px;
       font-weight: 600;
       color: var(--navy);
@@ -177,20 +186,19 @@
 
     .edu-item .period {
       font-size: 12px;
-      color: var(--accent);
+      color: var(--muted);
       font-weight: 500;
     }
 
     .badge {
       display: inline-block;
-      background: #fff3cd;
-      color: #856404;
+      background: var(--accent);
+      color: var(--dark);
       font-size: 11px;
-      font-weight: 600;
+      font-weight: 700;
       padding: 2px 8px;
-      border-radius: 10px;
-      margin-top: 4px;
-      border: 1px solid #ffc107;
+      border-radius: 4px;
+      margin-top: 6px;
     }
 
     /* ── LANGUAGES ──────────────────────────────────────── */
@@ -198,7 +206,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
     }
 
     .lang-item .lang-name {
@@ -209,17 +217,17 @@
 
     .lang-level {
       font-size: 11px;
-      font-weight: 600;
-      color: var(--accent);
-      background: var(--light-blue);
+      font-weight: 700;
+      color: var(--dark);
+      background: var(--accent);
       padding: 2px 8px;
-      border-radius: 10px;
+      border-radius: 4px;
     }
 
     /* ── EXPERIENCE ─────────────────────────────────────── */
     .job {
-      margin-bottom: 28px;
-      padding-bottom: 28px;
+      margin-bottom: 26px;
+      padding-bottom: 26px;
       border-bottom: 1px solid var(--border);
     }
 
@@ -233,62 +241,64 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
       gap: 12px;
     }
 
     .job-header h3 {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 16px;
       font-weight: 700;
       color: var(--navy);
     }
 
     .job-period {
-      font-size: 12px;
-      color: var(--accent);
-      font-weight: 600;
-      background: var(--light-blue);
+      font-size: 11.5px;
+      color: var(--dark);
+      font-weight: 700;
+      background: var(--accent);
       padding: 3px 10px;
-      border-radius: 12px;
+      border-radius: 4px;
       white-space: nowrap;
     }
 
     .job-company {
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 500;
       color: var(--muted);
       margin-bottom: 10px;
     }
 
     .job ul {
-      padding-left: 18px;
+      padding-left: 0;
       list-style: none;
     }
 
     .job ul li {
       font-size: 13.5px;
-      color: #333;
+      color: #374151;
       margin-bottom: 6px;
-      padding-left: 4px;
+      padding-left: 16px;
       position: relative;
     }
 
     .job ul li::before {
-      content: '▸';
+      content: '·';
       position: absolute;
-      left: -16px;
+      left: 3px;
       color: var(--accent);
-      font-size: 12px;
-      top: 2px;
+      font-size: 20px;
+      top: -3px;
+      font-weight: 700;
     }
 
     /* ── PROJECTS ───────────────────────────────────────── */
     .project {
-      margin-bottom: 20px;
-      padding: 16px 18px;
+      margin-bottom: 14px;
+      padding: 14px 16px;
       border-radius: 6px;
       border: 1px solid var(--border);
-      background: #fafbfd;
+      background: #FAFBFD;
     }
 
     .project:last-child {
@@ -299,42 +309,46 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       gap: 12px;
     }
 
     .project-header h4 {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--navy);
     }
 
     .project-private {
-      font-size: 11px;
+      font-size: 10.5px;
       color: var(--muted);
-      background: #f0f0f0;
-      padding: 2px 8px;
-      border-radius: 10px;
-      border: 1px solid #ddd;
+      background: #ECEEF2;
+      padding: 2px 7px;
+      border-radius: 3px;
+      border: 1px solid var(--border);
       white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
     }
 
     .project p {
       font-size: 13px;
-      color: #444;
+      color: #4B5563;
       margin-bottom: 8px;
+      line-height: 1.6;
     }
 
     /* ── SUMMARY ────────────────────────────────────────── */
     .summary {
       font-size: 14px;
-      color: #444;
-      line-height: 1.7;
-      background: #f5f8ff;
+      color: #374151;
+      line-height: 1.75;
       border-left: 3px solid var(--accent);
-      padding: 14px 18px;
+      padding: 12px 16px;
+      background: #FFFDF0;
       border-radius: 0 6px 6px 0;
-      margin-bottom: 0;
     }
 
     /* ── PRINT ──────────────────────────────────────────── */
@@ -353,7 +367,7 @@
       aside { border-right: none; border-bottom: 1px solid var(--border); }
       header { padding: 28px 24px 24px; }
       main { padding: 24px 20px; }
-      header h1 { font-size: 26px; }
+      header h1 { font-size: 28px; }
     }
   </style>
 </head>
@@ -365,10 +379,22 @@
     <h1>Kauan Henrique Kaestner</h1>
     <p class="title">Desenvolvedor Backend &amp; IA · Python · LLMs · Automação</p>
     <div class="contacts">
-      <span><span class="icon">📍</span> Jaraguá do Sul – SC</span>
-      <a href="tel:+5547992277579"><span class="icon">📱</span> (47) 99227-7579</a>
-      <a href="mailto:kauankaestner06@gmail.com"><span class="icon">✉</span> kauankaestner06@gmail.com</a>
-      <a href="https://github.com/KauanHK" target="_blank"><span class="icon">⌥</span> github.com/KauanHK</a>
+      <span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Jaraguá do Sul – SC
+      </span>
+      <a href="tel:+5547992277579">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.86 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17z"/></svg>
+        (47) 99227-7579
+      </a>
+      <a href="mailto:kauankaestner06@gmail.com">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        kauankaestner06@gmail.com
+      </a>
+      <a href="https://github.com/KauanHK" target="_blank">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        github.com/KauanHK
+      </a>
     </div>
   </header>
 
@@ -418,7 +444,6 @@
           <div class="tags">
             <span class="tag">AWS Lambda</span>
             <span class="tag">AWS ECR</span>
-            <span class="tag">DynamoDB</span>
             <span class="tag">S3</span>
             <span class="tag">Docker</span>
             <span class="tag">Docker Compose</span>
@@ -449,7 +474,6 @@
           <div class="tags">
             <span class="tag">Linux</span>
             <span class="tag">DNS / Domínios</span>
-            <span class="tag">Subdomínios</span>
             <span class="tag">Redes Docker</span>
           </div>
         </div>
@@ -481,7 +505,7 @@
       <section>
         <h2 class="section-title">Sobre mim</h2>
         <p class="summary">
-          Desenvolvedor backend apaixonado por Python, com experiência sólida em APIs REST com FastAPI, automações (RPA, n8n), agentes de IA baseados em LLMs e infraestrutura em nuvem (AWS). Gosto de construir soluções completas — desde a API até a configuração do servidor — e tenho grande interesse em aplicações práticas de inteligência artificial. Cursando Engenharia de Software e em constante evolução técnica.
+          Desenvolvedor backend com atuação profissional desde o início da graduação em Engenharia de Software. Na Widelab, entrego APIs com FastAPI, RPAs e agentes de IA com LLMs diretamente em produção — não em protótipos. Tenho domínio de toda a cadeia: do desenvolvimento à infraestrutura (AWS, Docker, Nginx, servidores Linux). Inglês técnico fluente.
         </p>
       </section>
 
@@ -515,23 +539,23 @@
 
         <div class="project">
           <div class="project-header">
-            <h4>Sistema Comercial</h4>
+            <h4>Poupa Já</h4>
             <span class="project-private">privado</span>
           </div>
-          <p>Sistema comercial completo com backend em <strong>Python (FastAPI)</strong> e frontend em <strong>TypeScript</strong>, containerizados com Docker. Cobre gestão de clientes, vendas e operações comerciais.</p>
+          <p>App de finanças pessoais com <strong>agente de IA no WhatsApp</strong> (orquestrado em n8n): após o pagamento, o usuário recebe acesso a um número que registra transações, consulta extratos e gera insights financeiros por conversa. Categorização automática de transações por IA, pagamentos recorrentes e assinatura premium via <strong>Cakto</strong> — webhook idempotente que processa PIX, aprovação de compra e reembolso, ativando ou revertendo o plano automaticamente. Backend <strong>FastAPI</strong> + PostgreSQL, frontend TypeScript/React.</p>
           <div class="tags">
-            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">TypeScript</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span>
+            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">n8n</span><span class="tag">LLMs</span><span class="tag">TypeScript</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">WhatsApp API</span>
           </div>
         </div>
 
         <div class="project">
           <div class="project-header">
-            <h4>CRM</h4>
+            <h4>Agenda Bot</h4>
             <span class="project-private">privado</span>
           </div>
-          <p>CRM desenvolvido do zero com <strong>Python (FastAPI)</strong> no backend e <strong>TypeScript</strong> no frontend, com infraestrutura Docker. Gerenciamento de clientes, pipeline de vendas e automações.</p>
+          <p>SaaS multi-tenant de agendamento para salões e clínicas: estabelecimentos configuram serviços, horários e equipe; clientes recebem confirmações automáticas via <strong>WhatsApp</strong>. Notificações despachadas por workers <strong>Celery</strong> que renderizam templates personalizados e enviam via Evolution API, com row-level locking para evitar envios duplicados. Backend <strong>FastAPI</strong> + PostgreSQL, frontend TypeScript/React.</p>
           <div class="tags">
-            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">TypeScript</span><span class="tag">Docker</span>
+            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Celery</span><span class="tag">TypeScript</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">WhatsApp API</span>
           </div>
         </div>
 
@@ -540,9 +564,31 @@
             <h4>Sistema de Emissão de Notas Fiscais</h4>
             <span class="project-private">privado</span>
           </div>
-          <p>Solução de emissão de notas fiscais eletrônicas com backend <strong>Python</strong> e frontend <strong>TypeScript</strong>. Integração com APIs fiscais e fluxo completo de emissão e armazenamento.</p>
+          <p>Sistema de emissão de NF-e com integração à API da <strong>Betha Systems</strong> — geração e assinatura digital de XML, consulta de CNPJ via BrasilAPI, emissão recorrente automatizada via cron e rastreamento de status por polling. Backend <strong>FastAPI</strong> + PostgreSQL, frontend TypeScript.</p>
           <div class="tags">
-            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">TypeScript</span><span class="tag">Docker</span>
+            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">TypeScript</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <h4>Sistema Comercial</h4>
+            <span class="project-private">privado</span>
+          </div>
+          <p>Plataforma de analytics para equipe de vendas: KPIs de positivação de clientes, evolução de faturamento com drilldown por UF/cidade/vendedor e mapeamento geoespacial da carteira. Processamento de dados com <strong>Pandas</strong>, backend <strong>FastAPI</strong> + PostgreSQL, frontend TypeScript, Docker.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Pandas</span><span class="tag">TypeScript</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <h4>CRM</h4>
+            <span class="project-private">privado</span>
+          </div>
+          <p>CRM para empresa do setor de moda, com backend <strong>FastAPI</strong> assíncrono em arquitetura hexagonal (ports &amp; adapters), PostgreSQL e frontend <strong>TypeScript</strong>. Gerenciamento de clientes com controle de acesso por perfis, containerizado com Docker.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">TypeScript</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span>
           </div>
         </div>
 
